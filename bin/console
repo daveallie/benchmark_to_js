@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "benchmark_to_js"
+
+require "irb"
+IRB.start
