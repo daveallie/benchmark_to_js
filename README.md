@@ -63,9 +63,11 @@ To use, just wrap a section of a view in a `benchmark_to_js(name)` block, like s
 Both methods will render the content as if it wasn't in the block, and a line will be logged to the Javascript console: `'my content' ran in 123.456ms`.
 
 If pretty formatting is enabled (it is by default) then your output will look something like this:
+
 ![Pretty console output](img/pretty.png)
 
 and if it isn't, well then it will look bland, like this:
+
 ![Bland console output](img/bland.png)
 
 That's all there is to it!
