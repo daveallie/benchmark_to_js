@@ -5,8 +5,8 @@ module BenchmarkToJs
     def initialize
       self.run_in_environments = [:development]
       self.pretty = true
-      self.orange_threshold = 500
-      self.red_threshold = 2000
+      self.orange_threshold = 100
+      self.red_threshold = 500
     end
 
     def run?

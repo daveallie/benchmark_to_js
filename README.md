@@ -32,8 +32,8 @@ BenchmarkToJs.configure do |config|
 
   # the following only apply if pretty if set to true
   # minimum milliseconds before time is highlighted in respective colour
-  config.red_threshold = 1000   # default 2000
-  config.orange_threshold = 200 # default 500
+  config.red_threshold = 1000   # default 500
+  config.orange_threshold = 200 # default 100
 end
 ```
 
