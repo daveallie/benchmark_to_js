@@ -34,6 +34,11 @@ BenchmarkToJs.configure do |config|
   # minimum milliseconds before time is highlighted in respective colour
   config.red_threshold = 1000   # default 500
   config.orange_threshold = 200 # default 100
+
+  # options that will be passed to `javascript_tag`
+  # takes anything that responds to `call`
+  # first argument will be the context in which you called `benchmark_to_js` (most likely your view), so any instance methods available there are available here
+  config.tag_options = lambda {|ctx| {nonce: ctx.content_security_policy_script_nonce} }
 end
 ```
 
