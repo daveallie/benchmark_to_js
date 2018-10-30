@@ -34,6 +34,9 @@ BenchmarkToJs.configure do |config|
   # minimum milliseconds before time is highlighted in respective colour
   config.red_threshold = 1000   # default 500
   config.orange_threshold = 200 # default 100
+
+  # optional; options that will be passed to `javascript_tag`. proc will be called in the context of wherever you have called `benchmark_to_js`.
+  config.tag_options = Proc.new { {nonce: content_security_policy_script_nonce} }
 end
 ```
 

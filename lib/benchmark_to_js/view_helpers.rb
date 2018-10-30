@@ -19,7 +19,8 @@ module BenchmarkToJs
           %Q("'#{escape_javascript(name)}' ran in #{time.round(5)}ms")
         end
 
-        ret + javascript_tag(%Q(console.log(#{message})))
+        options = BenchmarkToJs.configuration.tag_options.respond_to?(:call) ? BenchmarkToJs.configuration.tag_options.call(self) : nil
+        ret + javascript_tag(%Q(console.log(#{message})), options)
       else
         capture(&block)
       end
